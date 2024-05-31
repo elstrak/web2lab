@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор комплексных чисел</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <h1>Калькулятор комплексных чисел</h1>
+
+    <label for="formSelect">Форма представления:</label>
+    <select id="formSelect">
+        <option value="exp">Показательная</option>
+        <option value="trig">Тригонометрическая</option>
+    </select>
+    <button onclick="showForm()">Показать</button>
+
+    <div id="inputFields">
+        <label for="argumentInput">Аргумент:</label>
+        <input type="number" id="argumentInput">
+        <label for="modulusInput">Модуль:</label>
+        <input type="number" id="modulusInput"> 
+    </div>
+
+    <h2>Операции:</h2> 
+<div class="checkbox-group">
+    <input type="checkbox" id="realPart">
+    <label for="realPart">Действительная часть</label><br>
+    <input type="checkbox" id="imagPart">
+    <label for="imagPart">Мнимая часть</label><br>
+    <input type="checkbox" id="argument">
+    <label for="argument">Аргумент</label><br>
+    <input type="checkbox" id="otherForm">
+    <label for="otherForm">Другая форма</label><br>
+</div>
+    <button onclick="calculate()">Вычислить</button>
+    <button onclick="clearFields()">Очистить</button>
+
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
